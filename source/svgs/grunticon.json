@@ -1,0 +1,4 @@
+{
+	"energy-left": [".slide:after"],
+	"energy-right": [".slide .slide-text"]
+}

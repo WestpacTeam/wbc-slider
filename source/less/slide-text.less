@@ -1,0 +1,123 @@
+/*
+ * Slide text styles
+ */
+
+.slide-text {
+	color: #fff;
+
+/* ---------------------------------------| HEADER |--------------------------------------- */
+	.slide-text-header {
+		font-family: @brand-fontfamily;
+		overflow: hidden;
+
+		strong {
+			font-weight: normal;
+		}
+	}
+
+/* ---------------------------------------| COLS */
+	.slide-text-col1,
+	.slide-text-col2,
+	.slide-text-col3 {
+		float: left;
+		overflow: hidden;
+		width: 66.66666%;
+	}
+
+	.slide-text-col2 {
+		width: 50%;
+
+		&+ .slide-text-col2 {
+			border-left: 1px solid #fff;
+			padding-left: 12px;
+		}
+	}
+
+	.slide-text-col1 {
+		width: 33.33333%;
+		border-left: 1px solid #fff;
+		padding-left: 12px;
+	}
+
+/* ---------------------------------------| CLASSIC */
+	.slide-text-classic {
+		font-size: 54px;
+		line-height: 1.1;
+	}
+
+/* ---------------------------------------| CASH */
+	.slide-text-cash {
+		font-size: 54px;
+		overflow: hidden;
+		display: block;
+		line-height: 1.25;
+	}
+
+	.slide-text-cash-currency {
+		float: left;
+	}
+
+	.slide-text-cash-init {
+		font-size: 164px;
+		float: left;
+		line-height: 0.9;
+	}
+
+	.slide-text-cash-headline {
+		font-size: 28px;
+	}
+
+	.slide-text-cash-headline-em {
+		font-size: 70px;
+		display: block;
+		line-height: 0.75;
+	}
+
+/* ---------------------------------------| RATES */
+	.slide-text-rate {
+		overflow: hidden;
+		display: block;
+	}
+
+	.slide-text-col3 .slide-text-rate {
+		font-size: 16px;
+	}
+
+	.slide-text-col2 .slide-text-rate {
+		font-size: 10px;
+	}
+
+	.slide-text-rate-init {
+		font-size: 10.25em;
+		float: left;
+		line-height: 0.9;
+	}
+
+	.slide-text-rate-unit {
+		font-size: 4.5em;
+		display: block;
+		line-height: 1.3;
+	}
+
+	.slide-text-rate-period {
+		font-size: 2.9em;
+		line-height: 0.2;
+	}
+
+	.slide-text-rate-subline {
+		font-family: @fontfamily;
+		font-size: 16px;
+	}
+
+/* ---------------------------------------| BODY |--------------------------------------- */
+	.slide-text-body {}
+
+	.slide-text-body-byline {
+		font-size: 21px;
+	}
+
+	.slide-text-body-fineprint {
+		font-size: 12px;
+		line-height: 1.7;
+	}
+}

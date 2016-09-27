@@ -1,0 +1,178 @@
+/*
+ * Slider style
+ */
+
+/* ---------------------------------------| VENDOR STYLES |--------------------------------------- */
+.slick-slider {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.dragging {
+		cursor: pointer;
+		cursor: hand;
+	}
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.slick-loading & {
+		visibility: hidden;
+	}
+}
+.slick-slide {
+	float: left;
+	height: 100%;
+	min-height: 1px;
+	[dir="rtl"] & {
+		float: right;
+	}
+	img {
+		display: block;
+	}
+	&.slick-loading img {
+		display: none;
+	}
+
+	display: none;
+
+	&.dragging img {
+		pointer-events: none;
+	}
+
+	.slick-initialized & {
+		display: block;
+	}
+
+	.slick-loading & {
+		visibility: hidden;
+	}
+
+	.slick-vertical & {
+		display: block;
+		height: auto;
+		border: 1px solid transparent;
+	}
+}
+.slick-arrow.slick-hidden {
+	display: none;
+}
+
+
+/* ---------------------------------------| CUSTOM |--------------------------------------- */
+@slider-sides: 200px; //the size of the portion we don't see of the slider. We need some hidden chunks so the transition of the slides are smooth
+
+.slider-wrapper {
+	position: relative;
+	overflow: hidden;
+
+	@media (min-width: @screen-sm) {
+		height: 390px;
+	}
+}
+
+.slider {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	z-index: 5;
+
+	@media (min-width: @screen-sm) {
+		margin: 0 -@slider-sides 0 0;
+	}
+
+	.slick-dots {
+		position: absolute;
+	}
+}
+
+.slick-pits { //we call them pits because we all laughed when Justin named them
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	list-style: none;
+	padding: 0;
+	margin: 0 @slider-sides 0 0;
+	text-align: center;
+
+	li { //we should have a class here really
+		display: inline-block;
+		margin: 0 6px 18px 6px;
+	}
+
+	button {
+		-webkit-appearance: none;
+		appearance: none;
+		background: transparent;
+		height: 12px;
+		width: 12px;
+		padding: 0;
+		margin: 0;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		transition: background 0.2s ease;
+		text-indent: -9999em;
+		overflow: hidden;
+		font-size: 0;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:focus {
+			.outline();
+
+			.is-keyboarduser & {
+				outline-color: #fff; //white outline important for a11y
+			}
+		}
+	}
+
+	li.slick-active button {
+		background: #fff;
+	}
+}
