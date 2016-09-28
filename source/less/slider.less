@@ -136,8 +136,12 @@
 	z-index: 2;
 	list-style: none;
 	padding: 0;
-	margin: 0 @slider-sides 0 0;
+	margin: 0;
 	text-align: center;
+
+	@media (min-width: @screen-sm) {
+		margin-right: @slider-sides;
+	}
 
 	li { //we should have a class here really
 		display: inline-block;

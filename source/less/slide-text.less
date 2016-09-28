@@ -6,15 +6,34 @@
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 120px;
+	bottom: 0;
+	overflow: auto;
+
+	@media (min-width: @screen-sm) {
+		position: absolute;
+		left: 0;
+		right: @slider-sides;
+		bottom: 0;
+		top: 0;
+	}
+
 	.slide-text-header,
 	.slide-text-body {
-		max-width: 636px;
+		@media (min-width: @screen-sm) {
+			max-width: 545px;
+			width: 50%;
+		}
 	}
 
 /* ---------------------------------------| HEADER |--------------------------------------- */
 	.slide-text-header {
 		font-family: @brand-fontfamily;
 		overflow: hidden;
+		margin-top: 2em;
 
 		strong {
 			font-weight: normal;
@@ -110,7 +129,9 @@
 	}
 
 /* ---------------------------------------| BODY |--------------------------------------- */
-	.slide-text-body {}
+	.slide-text-body {
+		margin-bottom: 2em;
+	}
 
 	.slide-text-body-byline {
 		font-size: 21px;

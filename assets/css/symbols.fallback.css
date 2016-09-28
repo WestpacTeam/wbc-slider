@@ -1,6 +1,6 @@
 .slide:after,
 .custom-energy-left { background-image: url('../img/energy-left.png'); background-repeat: no-repeat; }
 
-.slide .slide-text,
+.slide:before,
 .custom-energy-right { background-image: url('../img/energy-right.png'); background-repeat: no-repeat; }
 
