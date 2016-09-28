@@ -6,6 +6,11 @@
 	color: #fff;
 	-webkit-font-smoothing: antialiased;
 
+	.slide-text-header,
+	.slide-text-body {
+		max-width: 636px;
+	}
+
 /* ---------------------------------------| HEADER |--------------------------------------- */
 	.slide-text-header {
 		font-family: @brand-fontfamily;
@@ -17,27 +22,15 @@
 	}
 
 /* ---------------------------------------| COLS */
-	.slide-text-col1,
-	.slide-text-col2,
-	.slide-text-col3 {
+	.slide-text-col2 {
 		float: left;
 		overflow: hidden;
-		width: 66.66666%;
-	}
-
-	.slide-text-col2 {
 		width: 50%;
 
 		&+ .slide-text-col2 {
-			border-left: 1px solid #fff;
+			border-left: 1px solid #ea8095;
 			padding-left: 12px;
 		}
-	}
-
-	.slide-text-col1 {
-		width: 33.33333%;
-		border-left: 1px solid #fff;
-		padding-left: 12px;
 	}
 
 /* ---------------------------------------| CLASSIC */
@@ -51,7 +44,7 @@
 		font-size: 54px;
 		overflow: hidden;
 		display: block;
-		line-height: 1.25;
+		line-height: 1.2;
 	}
 
 	.slide-text-cash-currency {
@@ -68,20 +61,12 @@
 		font-size: 28px;
 	}
 
-	.slide-text-cash-headline-em {
-		font-size: 70px;
-		display: block;
-		line-height: 0.75;
-	}
-
 /* ---------------------------------------| RATES */
 	.slide-text-rate {
+		float: left;
 		overflow: hidden;
-		display: block;
-	}
-
-	.slide-text-col3 .slide-text-rate {
 		font-size: 16px;
+		width: 420px;
 	}
 
 	.slide-text-col2 .slide-text-rate {
@@ -108,6 +93,20 @@
 	.slide-text-rate-subline {
 		font-family: @fontfamily;
 		font-size: 16px;
+	}
+
+	.slide-text-rate-headline {
+		float: left;
+		font-size: 28px;
+		border-left: 1px solid #ea8095;
+		padding-left: 12px;
+		margin-left: 12px;
+	}
+
+	.slide-text-rate-headline-em {
+		font-size: 70px;
+		display: block;
+		line-height: 0.75;
 	}
 
 /* ---------------------------------------| BODY |--------------------------------------- */
