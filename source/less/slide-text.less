@@ -3,15 +3,16 @@
  */
 
 .slide-text {
-	color: #fff;
-	-webkit-font-smoothing: antialiased;
-
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 120px;
 	bottom: 0;
 	overflow: auto;
+	margin: 12px 6% 42px 6%;
+	color: #fff;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
 
 	@media (min-width: @screen-sm) {
 		position: absolute;
@@ -19,21 +20,50 @@
 		right: @slider-sides;
 		bottom: 0;
 		top: 0;
+		margin: 48px 4% 42px 4%;
+		text-align: left;
 	}
 
 	.slide-text-header,
 	.slide-text-body {
 		@media (min-width: @screen-sm) {
 			max-width: 545px;
-			width: 50%;
+			width: 45%;
 		}
 	}
+
+	.slide-text-header {
+		@media (min-width: @screen-md) {
+			max-width: 740px;
+			width: 42%;
+		}
+
+		@media (min-width: @screen-lg) {
+			width: 41%;
+		}
+	}
+
+/* ---------------------------------------| STICKY FOOTER |--------------------------------------- */
+	.slide-text-wrapper {
+		min-height: 100%;
+		margin-bottom: -36px;
+
+		&:after {
+			content: '';
+			display: block;
+			height: 36px;
+		}
+	}
+
+	.slide-text-footer {
+		height: 36px;
+	}
+
 
 /* ---------------------------------------| HEADER |--------------------------------------- */
 	.slide-text-header {
 		font-family: @brand-fontfamily;
 		overflow: hidden;
-		margin-top: 2em;
 
 		strong {
 			font-weight: normal;
@@ -54,38 +84,78 @@
 
 /* ---------------------------------------| CLASSIC */
 	.slide-text-classic {
-		font-size: 54px;
+		display: block;
+		font-size: 30px;
 		line-height: 1.1;
+		margin-top: 12px;
+
+		@media (min-width: @screen-sm) {
+			font-size: 36px;
+		}
+
+		@media (min-width: @screen-md) {
+			font-size: 42px;
+		}
+
+		@media (min-width: @screen-lg) {
+			font-size: 48px;
+		}
 	}
 
 /* ---------------------------------------| CASH */
 	.slide-text-cash {
-		font-size: 54px;
+		font-size: 30px;
 		overflow: hidden;
 		display: block;
-		line-height: 1.2;
+		line-height: 1.1;
+		margin: 12px auto 0 auto;
+
+		@media (min-width: @screen-sm) {
+			font-size: 36px;
+			margin-top: 0;
+			margin-bottom: -6px;
+		}
+
+		@media (min-width: @screen-md) {
+			font-size: 42px;
+		}
+
+		@media (min-width: @screen-lg) {
+			font-size: 52px;
+		}
 	}
 
 	.slide-text-cash-currency {
-		float: left;
+		@media (min-width: @screen-sm) {
+			float: left;
+		}
 	}
 
 	.slide-text-cash-init {
-		font-size: 164px;
-		float: left;
-		line-height: 0.9;
-	}
+		margin-left: -6px;
 
-	.slide-text-cash-headline {
-		font-size: 28px;
+		@media (min-width: @screen-sm) {
+			float: left;
+			line-height: 0.8;
+			font-size: 106px;
+			margin-left: 0;
+		}
+
+		@media (min-width: @screen-md) {
+			font-size: 125px;
+		}
+
+		@media (min-width: @screen-lg) {
+			font-size: 150px;
+		}
 	}
 
 /* ---------------------------------------| RATES */
 	.slide-text-rate {
+		position: relative;
 		float: left;
 		overflow: hidden;
 		font-size: 16px;
-		width: 420px;
 	}
 
 	.slide-text-col2 .slide-text-rate {
@@ -93,20 +163,25 @@
 	}
 
 	.slide-text-rate-init {
+		position: relative;
 		font-size: 10.25em;
 		float: left;
 		line-height: 0.9;
+		margin-right: 0.6em;
 	}
 
 	.slide-text-rate-unit {
+		position: absolute;
+		top: 0;
+		right: 0.45em;
 		font-size: 4.5em;
-		display: block;
-		line-height: 1.3;
 	}
 
 	.slide-text-rate-period {
+		position: absolute;
+		top: 1.4em;
+		right: 0.05em;
 		font-size: 2.9em;
-		line-height: 0.2;
 	}
 
 	.slide-text-rate-subline {
@@ -128,18 +203,33 @@
 		line-height: 0.75;
 	}
 
+
 /* ---------------------------------------| BODY |--------------------------------------- */
-	.slide-text-body {
-		margin-bottom: 2em;
-	}
+	.slide-text-body {}
 
 	.slide-text-body-byline {
-		font-size: 21px;
+		font-size: 18px;
+		margin: 0.4em 0;
+		line-height: 1.3;
+
+		@media (min-width: @screen-sm) {
+			font-size: 20px;
+			line-height: 1.42857143;
+			margin: 0.85714286em 0;
+		}
 	}
 
 	.slide-text-body-fineprint {
 		font-size: 12px;
 		line-height: 1.7;
 		-webkit-font-smoothing: auto;
+	}
+
+
+/* ---------------------------------------| BODY |--------------------------------------- */
+	.slide-text-footer-button {}
+
+	.slide-text-footer-button-sronly {
+		.sr-only();
 	}
 }
