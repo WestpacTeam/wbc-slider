@@ -63,7 +63,7 @@
 /* ---------------------------------------| HEADER |--------------------------------------- */
 	.slide-text-header {
 		font-family: @brand-fontfamily;
-		overflow: hidden;
+		._grid-clearfix();
 
 		strong {
 			font-weight: normal;
@@ -151,56 +151,119 @@
 	}
 
 /* ---------------------------------------| RATES */
-	.slide-text-rate {
-		position: relative;
-		float: left;
+	.slide-text-rate-wrapper {
 		overflow: hidden;
-		font-size: 16px;
+
+		@media (min-width: @screen-sm) {
+			margin: 0 -70px 0 0;
+			margin-bottom: -6px;
+		}
+
+		@media (min-width: @screen-lg) {
+			margin-bottom: 0px;
+		}
+	}
+
+	.slide-text-rate {
+		@media (min-width: @screen-sm) {
+			position: relative;
+			float: left;
+			overflow: hidden;
+		}
+	}
+
+	.slide-text-rate-wrapper,
+	.slide-text-rate {
+		font-size: 36px;
+		line-height: 1.1;
+
+		@media (min-width: @screen-sm) {
+			font-size: 10px;
+		}
+
+		@media (min-width: @screen-md) {
+			font-size: 12px;
+		}
+
+		@media (min-width: @screen-lg) {
+			font-size: 16px;
+		}
 	}
 
 	.slide-text-col2 .slide-text-rate {
 		font-size: 10px;
+
+		@media (min-width: @screen-md) {
+			font-size: 8px;
+		}
+
+		@media (min-width: @screen-lg) {
+			font-size: 10px;
+		}
+	}
+
+	.slide-text-rate-init,
+	.slide-text-rate-unit {
+		font-size: 52px;
 	}
 
 	.slide-text-rate-init {
-		position: relative;
-		font-size: 10.25em;
-		float: left;
-		line-height: 0.9;
-		margin-right: 0.6em;
+		@media (min-width: @screen-sm) {
+			position: relative;
+			font-size: 9.375em;
+			float: left;
+			line-height: 0.9;
+			margin-right: 0.6em;
+		}
 	}
 
 	.slide-text-rate-unit {
-		position: absolute;
-		top: 0;
-		right: 0.45em;
-		font-size: 4.5em;
+		@media (min-width: @screen-sm) {
+			position: absolute;
+			top: 0;
+			right: 0.45em;
+			font-size: 4em;
+		}
 	}
 
 	.slide-text-rate-period {
-		position: absolute;
-		top: 1.4em;
-		right: 0.05em;
-		font-size: 2.9em;
+		@media (min-width: @screen-sm) {
+			position: absolute;
+			top: 1.6em;
+			right: 0.05em;
+			font-size: 2.5em;
+			width: 1.9em;
+		}
 	}
 
 	.slide-text-rate-subline {
 		font-family: @fontfamily;
 		font-size: 16px;
+		clear: both;
 	}
 
 	.slide-text-rate-headline {
-		float: left;
-		font-size: 28px;
-		border-left: 1px solid #ea8095;
-		padding-left: 12px;
-		margin-left: 12px;
+		display: block;
+		font-size: 18px;
+
+		@media (min-width: @screen-sm) {
+			float: left;
+			font-size: 1.75em;
+			border-left: 1px solid #ea8095;
+			padding-left: 0.75em;
+			margin-left: 0.375em;
+			margin-top: 0.25em;
+			line-height: 1.25;
+		}
 	}
 
 	.slide-text-rate-headline-em {
-		font-size: 70px;
-		display: block;
-		line-height: 0.75;
+		@media (min-width: @screen-sm) {
+			font-size: 1.9285714286em;
+			display: block;
+			line-height: 0.75;
+			margin-top: 0.05555555556em;
+		}
 	}
 
 
