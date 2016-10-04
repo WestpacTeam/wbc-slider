@@ -1,4 +1,4 @@
 {
 	"energy-left": [".slide:after"],
-	"energy-right": [".slide:before", ".slide.slide-textonly .slide-textonly-wrapper:after"]
+	"energy-right": [".slide:before", ".slide.slide-compare .slide-compare-wrapper:after"]
 }
