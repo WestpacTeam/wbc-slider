@@ -1,7 +1,7 @@
-.slide:after,
+.slide:before,
 .custom-energy-left { background-image: url('../img/energy-left.png'); background-repeat: no-repeat; }
 
-.slide:before,
+.slide:after,
 .slide.slide-compare .slide-compare-wrapper:after,
 .custom-energy-right { background-image: url('../img/energy-right.png'); background-repeat: no-repeat; }
 
