@@ -46,6 +46,16 @@
 				width: 545px;
 			}
 		}
+
+		.ie8 & {
+			background-color: @color-A;
+		}
+
+		.slide-compare & {
+			.ie8 & {
+				background-color: transparent;
+			}
+		}
 	}
 
 	.slide-text-header {
@@ -209,6 +219,10 @@
 
 		.slide-rate & {
 			float: none;
+
+			@media (min-width: @screen-sm) {
+				float: left;
+			}
 		}
 	}
 

@@ -1,4 +1,5 @@
 {
 	"energy-left": [".slide:before"],
-	"energy-right": [".slide:after", ".slide.slide-compare .slide-compare-wrapper:after"]
+	"energy-right": [".slide:after", ".slide.slide-compare .slide-compare-wrapper:after"],
+	"feminine-curve": []
 }
