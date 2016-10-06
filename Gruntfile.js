@@ -354,6 +354,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ //run build with watch
 		'_build',
 		'connect',
+		'wakeup',
 		'watch',
 	]);
 
