@@ -1,5 +1,6 @@
 {
-	"energy-left": [".slide:before"],
+	"energy-left": [".slide:before", ".headers:after"],
 	"energy-right": [".slide:after", ".slide.slide-compare .slide-compare-wrapper:after"],
-	"feminine-curve": []
+	"wedge-stone": [".headers.headers-stonewedge .headers-text:after"],
+	"wedge-white": [".headers.headers-whitewedge .headers-text:after"]
 }

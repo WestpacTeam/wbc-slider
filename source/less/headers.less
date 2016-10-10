@@ -1,0 +1,169 @@
+/*
+ * Header styles
+ *
+ * CSS for the header variations:
+ * - Full bleed
+ * - Stone wedge
+ * - White wedge
+ */
+
+.headers {
+	position: relative;
+	overflow: hidden;
+	background-color: @color-Background;
+
+	@media (min-width: @screen-sm) {
+		height: 342px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -30px;
+		height: 217px;
+		width: 105px;
+		background-size: auto 221px;
+		background-position-y: -2px;
+
+		@media (min-width: @screen-sm) {
+			background-size: auto 345px;
+			height: 345px;
+			width: 166px;
+			right: -60px;
+		}
+
+		// @media (min-width: @screen-md) {
+		// 	right: -60px;
+		// }
+
+		@media (min-width: @screen-lg) {
+			right: 0;
+		}
+	}
+
+	&.headers-stonewedge {
+		background-color: @color-H-40;
+	}
+
+	&.headers-whitewedge {
+		background-color: #fff;
+	}
+
+	.headers-img-wrapper {
+		position: absolute;
+		top: 0;
+		left: -1000px;
+		right: -1000px;
+		height: 217px;
+		text-align: center;
+
+		@media (min-width: @screen-lg) {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.headers-image {
+		margin-left: -725px;
+
+		@media (min-width: 490px) {
+			margin-left: -615px;
+		}
+
+		@media (min-width: 600px) {
+			margin-left: -445px;
+		}
+
+		@media (min-width: @screen-sm) {
+			margin-left: -604px;
+		}
+
+		@media (min-width: @screen-lg) {
+			float: right;
+			margin-left: 0;
+		}
+
+		// @media (min-width: 1334px) {
+		// 	margin-left: -300px;
+		// }
+
+		// @media (min-width: 1644px) {
+		// 	margin-left: 0;
+		// }
+	}
+
+	.headers-img {
+		height: 217px;
+
+		@media (min-width: @screen-sm) {
+			height: 100%;
+		}
+	}
+
+	.headers-text {
+		position: relative;
+		padding: 247px 0 30px 0;
+
+		@media (min-width: @screen-sm) {
+			padding-top: 108px;
+			height: 342px;
+		}
+
+		.headers-stonewedge&,
+		.headers-whitewedge& {
+			@media (min-width: @screen-sm) {
+				background-color: @color-H-40;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: -1000px;
+					width: 1000px;
+					background-color: @color-H-40;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: -220px;
+					width: 220px;
+				}
+			}
+		}
+
+		.headers-whitewedge& {
+			@media (min-width: @screen-sm) {
+				background-color: #fff;
+
+				&:before {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
+	.headers-headline {
+		display: block;
+		font-family: @brand-fontfamily;
+		font-size: 30px;
+		color: @color-Hero;
+		margin: 0px 0px 12px 0px;
+		font-weight: normal;
+		line-height: 1.2;
+
+		@media (min-width: @screen-sm) {
+			font-size: 42px;
+			margin-bottom: 12px;
+		}
+	}
+
+	.headers-lead {
+		margin: 0;
+		font-size: 18px;
+	}
+}

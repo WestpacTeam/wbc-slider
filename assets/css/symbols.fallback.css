@@ -1,9 +1,14 @@
 .slide:before,
+.headers:after,
 .custom-energy-left { background-image: url('../img/energy-left.png'); background-repeat: no-repeat; }
 
 .slide:after,
 .slide.slide-compare .slide-compare-wrapper:after,
 .custom-energy-right { background-image: url('../img/energy-right.png'); background-repeat: no-repeat; }
 
-.custom-feminine-curve { background-image: url('../img/feminine-curve.png'); background-repeat: no-repeat; }
+.headers.headers-stonewedge .headers-text:after,
+.custom-wedge-stone { background-image: url('../img/wedge-stone.png'); background-repeat: no-repeat; }
+
+.headers.headers-whitewedge .headers-text:after,
+.custom-wedge-white { background-image: url('../img/wedge-white.png'); background-repeat: no-repeat; }
 

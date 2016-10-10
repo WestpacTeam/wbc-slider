@@ -293,6 +293,7 @@ module.exports = function(grunt) {
 			svg: {
 				files: [
 					'<%= SETTINGS.folder.svgs %>/*.svg',
+					'<%= SETTINGS.folder.svgs %>/grunticon.json',
 				],
 				tasks: [
 					'_svg',
