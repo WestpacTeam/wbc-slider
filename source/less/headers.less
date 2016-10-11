@@ -33,10 +33,6 @@
 			right: -60px;
 		}
 
-		// @media (min-width: @screen-md) {
-		// 	right: -60px;
-		// }
-
 		@media (min-width: @screen-lg) {
 			right: 0;
 		}
@@ -53,44 +49,87 @@
 	.headers-img-wrapper {
 		position: absolute;
 		top: 0;
-		left: -1000px;
-		right: -1000px;
-		height: 217px;
-		text-align: center;
+		right: 0;
 
-		@media (min-width: @screen-lg) {
+		.headers-fullbleed& {
+			position: absolute;
+			top: 0;
+			left: -1000px;
+			right: -1000px;
+			height: 217px;
+			text-align: center;
+
+			@media (min-width: @screen-lg) {
+				left: 0;
+				right: 0;
+			}
+		}
+
+		.headers-stonewedge&,
+		.headers-whitewedge& {
 			left: 0;
-			right: 0;
+			height: 217px;
+			overflow: hidden;
+
+			@media (min-width: @screen-sm) {
+				position: absolute;
+				top: 0;
+				left: -1000px;
+				right: -1000px;
+				height: 342px;
+				text-align: center;
+			}
 		}
 	}
 
 	.headers-image {
-		margin-left: -725px;
+		.headers-fullbleed& {
+			margin-left: -725px;
 
-		@media (min-width: 490px) {
-			margin-left: -615px;
+			@media (min-width: 490px) {
+				margin-left: -615px;
+			}
+
+			@media (min-width: 600px) {
+				margin-left: -445px;
+			}
+
+			@media (min-width: @screen-sm) {
+				margin-left: -604px;
+			}
+
+			@media (min-width: @screen-lg) {
+				float: right;
+				margin-left: 0;
+			}
 		}
 
-		@media (min-width: 600px) {
-			margin-left: -445px;
+		.headers-stonewedge&,
+		.headers-whitewedge& {
+			margin-left: -50px;
+			height: 217px;
+
+			@media (min-width: 500px) {
+				margin-left: 0;
+			}
+
+			@media (min-width: @screen-sm) {
+				margin-left: 700px;
+				height: 345px;
+			}
+
+			@media (min-width: @screen-md) {
+				margin-left: 890px;
+			}
+
+			@media (min-width: @screen-lg) {
+				margin-left: 980px;
+			}
+
+			@media (min-width: 1550px) {
+				margin-left: 1060px;
+			}
 		}
-
-		@media (min-width: @screen-sm) {
-			margin-left: -604px;
-		}
-
-		@media (min-width: @screen-lg) {
-			float: right;
-			margin-left: 0;
-		}
-
-		// @media (min-width: 1334px) {
-		// 	margin-left: -300px;
-		// }
-
-		// @media (min-width: 1644px) {
-		// 	margin-left: 0;
-		// }
 	}
 
 	.headers-img {
@@ -98,6 +137,27 @@
 
 		@media (min-width: @screen-sm) {
 			height: 100%;
+		}
+
+		.headers-stonewedge&,
+		.headers-whitewedge& {
+			height: 100%;
+			width: auto;
+			margin-right: 0;
+
+			@media (min-width: 440px) {
+				margin-right: -290px;
+			}
+
+			@media (min-width: 575px) {
+				height: auto;
+				width: 100%;
+				margin-right: 0;
+			}
+
+			@media (min-width: @screen-sm) {
+				width: auto;
+			}
 		}
 	}
 
