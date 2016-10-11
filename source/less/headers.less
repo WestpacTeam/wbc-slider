@@ -35,6 +35,16 @@
 
 		@media (min-width: @screen-lg) {
 			right: 0;
+
+			.has-left-nav & {
+				right: -60px;
+			}
+		}
+
+		.has-left-nav & {
+			@media (min-width: 1550px) {
+				right: 0;
+			}
 		}
 	}
 
@@ -44,6 +54,18 @@
 
 	&.headers-whitewedge {
 		background-color: #fff;
+	}
+
+	.has-left-nav & {
+		.container-fluid {
+			@media (min-width: @screen-lg) {
+				margin: 0 3.759765625%;
+			}
+
+			@media (min-width: 1449px) {
+				margin: 0 auto;
+			}
+		}
 	}
 
 	.headers-img-wrapper {
@@ -124,10 +146,18 @@
 
 			@media (min-width: @screen-lg) {
 				margin-left: 980px;
+
+				.has-left-nav & {
+					margin-left: 900px;
+				}
 			}
 
 			@media (min-width: 1550px) {
 				margin-left: 1060px;
+
+				.has-left-nav & {
+					margin-left: 1060px;
+				}
 			}
 		}
 	}
